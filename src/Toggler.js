@@ -13,8 +13,8 @@ class Toggler extends Component {
 
         const styles = [
             { name: "satellite", url:"mapbox://styles/mapbox/satellite-streets-v11" },
-            { name: "Dark", url: "mapbox://styles/mapbox/dark-v11" },
-            { name: "Light", url: "mapbox://styles/mapbox/light-v11" }
+            { name: "Dark", url: "mapbox://styles/mapbox/dark-v9" },
+            { name: "Light", url: "mapbox://styles/mapbox/light-v9" }
         ]
     
         const buttons = styles.map((style, index) => {
