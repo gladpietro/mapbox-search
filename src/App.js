@@ -15,7 +15,7 @@ constructor(props) {
     map: null,
     latitude: 40.7128,
     longitude: -74.0060,
-    style: "mapbox://styles/mapbox/satellite-streets-v11",
+    style: "mapbox://styles/mapbox/satellite-v9",
     places: [
 
     ]
