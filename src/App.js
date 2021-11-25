@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+import React, { Component } from 'react' 
+import Map from './Map'
+import Toggler from './Toggler'
+import Search from './Search'
+import PlacesPanel from './PlacesPanel'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+
+constructor(props) {
+  super(props)
+
+  this.state = {
+    map: null,
+    latitude: 40.7128,
+    longitude: -74.0060,
+    style: "mapbox://styles/mapbox/satellite-streets-v11",
+    places: [
+
+    ]
+  }
+}
+
+
+  render() {
+    return (
+      <div className="App">
+        <PlacesPanel app={this}></PlacesPanel>
+        <Search app={this}></Search>
+        <Toggler app={this}></Toggler>
+        <Map app={this}></Map>
+      </div>
+    );
+  }
 }
 
 export default App;
